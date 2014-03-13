@@ -25,6 +25,9 @@ define([
 			'<img src="<%= icon_url %>" alt="" class="img-thumbnail">',
 			'<p class="forecast-fahr"><%= lowFahrenheit %>°F - <%= highFahrenheit %>°F</p>',
 			'<p class="forecast-cel"><%= lowCelsius %>°C - <%= highCelsius %>°C</p>',
+			'<div class="forecast-humidity">Humidity: <%= humidity %>%</div>',
+			'<div class="forecast-windMph">Wind: <%= windMph %> mph</div>',
+			'<div class="forecast-windKph">Wind: <%= windKph %> km/h</div>',
 			'<div class="forecast-conditions"><%= conditions %></div>',
 		'</div>'
 	].join('');

@@ -46,19 +46,36 @@ body {
 	width: 268px;
 	float: left;
 	margin-right: 16px;
+	position: relative;
 }
 .forecast-day img{ 
 	float: left; 
 	margin: 10px;
+	position: absolute;
 }
 .forecast-day p{ 
 	font-size: 26px;
+	margin-left: 100px;
 }
-.celsius .forecast-day .forecast-fahr{
+.celsius .forecast-day .forecast-fahr, .celsius .forecast-day .forecast-windMph {
 	display: none;
 }
-.fahrenheit .forecast-day .forecast-cel{
+.fahrenheit .forecast-day .forecast-cel, .fahrenheit .forecast-day .forecast-windKph{
 	display: none;
+	
+}
+
+.forecast-windMph, .forecast-windKph {
+	margin-left: 100px;
+}
+
+.forecast-conditions {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.forecast-humidity {
+	margin-left: 100px;
 }
 
 /* Timer */

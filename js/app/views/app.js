@@ -53,9 +53,9 @@ define([
 		render: function() {
 			this.$el.css('background-color', this.model.get('backgroundColor'));
 			this.$('.navbar-text').html(this.model.get('welcomeMessage'));
-			var tempType = this.model.get('celsius') ? 'celsius' : 'fahrenheit';
+			var tempType = this.model.get('celsius') ? 'celsius windKph' : 'fahrenheit windMph';
 			var clockType = this.model.get('clockType');
-			this.$el.removeClass('celsius fahrenheit hour12 hour24');
+			this.$el.removeClass('celsius fahrenheit hour12 hour24 windMph windKph');
 			this.$el.addClass(clockType);
 			this.$el.addClass(tempType);
 			return this;

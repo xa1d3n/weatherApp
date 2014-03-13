@@ -8,7 +8,6 @@ define([
 	var DaysCollection = Backbone.Collection.extend({
 		model: DayModel,
 		sync: function(method, model, options){  
-			options.timeout = 8000;  
 			options.dataType = "jsonp";
 			return Backbone.sync(method, model, options);  
 		},

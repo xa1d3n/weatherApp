@@ -38,7 +38,9 @@ define([
 				name: this.$('#nameInput').val()
 			};
 
-			this.collection.create(place);
+			if (place.name && place.countryCode) {
+				this.collection.create(place);
+			}
 			this.$modalEl.modal('hide');
 		}
 

@@ -6,8 +6,9 @@ define([
 	'app/views/place',
 	'app/views/add_place',
 	'app/views/time',
-	'app/views/date'
-], function ($, _, Backbone, PlacesCollection, PlaceView, AddPlaceView, TimeView, DateView) {
+	'app/views/date',
+	'app/models/location'
+], function ($, _, Backbone, PlacesCollection, PlaceView, AddPlaceView, TimeView, DateView, LocationModel) {
 
 	'use strict';
 
@@ -36,7 +37,26 @@ define([
 			this.$timeWrapper = this.$('#timeWrapper');
 			this.$dateWrapper = this.$('#dateWrapper');
 
+			this.locModel = new LocationModel();
+
 			this.collection = new PlacesCollection([]);
+			var that = this;
+			this.locModel.fetch({
+				success: function (model, response, options) {
+
+					var place = {
+						countryCode: response.region,
+						name: response.city
+					};
+
+					if (place.name && place.countryCode) {
+						that.collection.create(place);
+					}
+				},
+				error: function (collection, response, options) {
+					console.log('There was an error');
+				}
+			});
 			this.listenTo(this.collection, 'change destroy', this.render);
 			this.collection.fetch();
 

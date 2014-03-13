@@ -16,19 +16,20 @@ define([
 
           initialize: function() {
 
-            this.setTime();
+            this.setDate();
               
           },
 
-          setTime: function() {
+          setDate: function() {
 			var that = this;
+
           	setInterval(function(){
 	               var date = new Date();
 
-	               var dayTxt = date.getDay();
-	               var month = date.getMonth();
-	               var day = date.getDay();
-	               var year = date.getYear();
+	               var dayTxt = that.formatDayText(date.getDay());
+	               var month = that.formatMonth(date.getMonth());
+	               var day = date.getDate();
+	               var year = date.getFullYear();
 			
 				that.set({
 					dayTxt: dayTxt,
@@ -40,18 +41,24 @@ define([
             }, 1000);
           },
 
-          formatTime: function(val, hourtype) {
-          	if(val && val.length === 1) {
-          		val = "0" + val;
-          	}
+          formatDayText: function(day) {
+               if (day) {
+                    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-          	if (val && hourtype) {
-          		if (val > "12") {
-          			val = val - 12;
-          		}
-          	}
+                    var today = days[day];
+               }
 
-          	return val;
+               return today;
+          },
+
+          formatMonth: function(month) {
+               if (month) {
+                    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+                    var thisMonth = months[month];
+               }
+
+               return thisMonth;
           }
 
 

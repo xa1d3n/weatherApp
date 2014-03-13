@@ -78,9 +78,9 @@ define([
 	].join('');
 
 	Templates['date'] = [
-		'<span class="dayTxt"><%= dayTxt %></span>',
-		'<span class="month"><%= month %></span>',
-		'<span class="day"><%= day %></span>',
+		'<span class="dayTxt"><%= dayTxt %>, </span>',
+		'<span class="month"><%= month %> </span>',
+		'<span class="day"><%= day %>, </span>',
 		'<span class="year"><%= year %></span>',
 	].join('');
 

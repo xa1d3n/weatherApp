@@ -7,20 +7,21 @@ define([
 	Templates['place'] = [
 		'<div class="panel panel-info">',
 			'<div class="panel-heading">',
-				'<button id="btn-expand" type="button" class="close" aria-hidden="true">+</button>',
+				//'<button id="btn-expand" type="button" class="close" aria-hidden="true">+</button>',
 				'<button id="btn-remove" type="button" class="close" aria-hidden="true">&times;</button> ',
 				'<h3 class="panel-title">',
 					'<%= name %> - <%= countryCode %>',
 				'</h3>',
 			'</div>',
-			'<div class="panel-body">',
+			'<div class="panel-body row">',
 				'Loading...',
 			'</div>',
 		'</div>'
 	].join('');
 
 	Templates['day'] = [
-		'<div class="forecast-day">',
+	'<div class="col-lg-3">',
+		'<div class="forecast-day panel">',
 			'<h3><%= weekday %></h3>',
 			'<img src="<%= icon_url %>" alt="" class="img-thumbnail">',
 			'<p class="forecast-fahr"><%= lowFahrenheit %>°F - <%= highFahrenheit %>°F</p>',
@@ -29,7 +30,8 @@ define([
 			'<div class="forecast-windMph">Wind: <%= windMph %> mph</div>',
 			'<div class="forecast-windKph">Wind: <%= windKph %> km/h</div>',
 			'<div class="forecast-conditions"><%= conditions %></div>',
-		'</div>'
+		'</div>',
+	'</div>'
 	].join('');
 
 	Templates['modal'] = [

@@ -15,7 +15,6 @@ define([
 	var DashView = Backbone.View.extend({
 
 		html: [
-			'<h3>Dashboard page</h3>',
 			'<div id="timeWrapper"></div>',
 			'<div id="dateWrapper"></div>',
 			'<div id="places-list" class="clearfix">Loading...</div>',

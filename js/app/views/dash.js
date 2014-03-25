@@ -6,9 +6,10 @@ define([
 	'app/views/place',
 	'app/views/add_place',
 	'app/views/time',
+	'app/views/analog_clock',
 	'app/views/date',
 	'app/models/location'
-], function ($, _, Backbone, PlacesCollection, PlaceView, AddPlaceView, TimeView, DateView, LocationModel) {
+], function ($, _, Backbone, PlacesCollection, PlaceView, AddPlaceView, TimeView, AnalogClockView, DateView, LocationModel) {
 
 	'use strict';
 
@@ -16,6 +17,7 @@ define([
 
 		html: [
 			'<div id="timeWrapper"></div>',
+			'<div id="analogClockWrapper"></div>',
 			'<div id="dateWrapper"></div>',
 			'<div id="places-list" class="clearfix">Loading...</div>',
 			'<div id="dash-buttons">',
@@ -34,6 +36,7 @@ define([
 			this.$placesList = this.$('#places-list');
 			this.$dashButtons = this.$('#dash-buttons');
 			this.$timeWrapper = this.$('#timeWrapper');
+			this.$analogClockWrapper = this.$('#analogClockWrapper');
 			this.$dateWrapper = this.$('#dateWrapper');
 
 			this.locModel = new LocationModel();
@@ -72,7 +75,14 @@ define([
 				id: "time"
 			});
 			this.$timeWrapper.append(time.render().el); 
-			this.views.push(time.render().el);
+			this.views.push(time.render().el); 
+
+			var analogClock = new AnalogClockView({
+				id: "analogClock"
+			});
+
+			this.$analogClockWrapper.append(analogClock.render().el); 
+			this.views.push(analogClock.render().el); 
 
 			var date = new DateView({
 				id: "date"

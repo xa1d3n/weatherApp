@@ -113,3 +113,54 @@ body {
 	font-size: 1.3em;
 	text-align: center;
 }
+
+/* Analog Clock */
+
+.analog-clock {
+	width: 140px;
+	height: 140px;
+	margin: 0 auto;
+}
+
+#clock-face {
+	stroke: black;
+	stroke-width: 5px;
+	fill:white;
+}
+
+#h-hand, #m-hand, #s-hand, #s-tail {
+	stroke: black;
+	stroke-linecap: round;
+}
+
+#h-hand {
+	stroke-width: 3px;
+}
+
+#m-hand {
+	stroke-width: 2px;
+}
+
+#s-hand {
+	stroke-width: 1px;
+}
+
+.time-text {
+	text-align: center;
+}
+
+#analogClock {
+	display: none;
+}
+
+
+@media (max-width: 750px)
+{
+	#analogClock {
+		display: block;
+	}
+
+	#timeWrapper {
+		display: none;
+	}
+}

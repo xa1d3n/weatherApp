@@ -82,6 +82,22 @@ define([
 		'<span class="second"><%= second %></span>',
 	].join('');
 
+	Templates['analogClock'] = [
+		'<div class="analog-clock">',
+			'<svg width="200" height="140">',
+				'<circle id="clock-face" cx="70" cy="70" r="65" />',//draw circle with radius of 65px
+				'<line id="h-hand" x1="70" y1="70" x2="70" y2="38" />', // hour hand
+				'<line id="m-hand" x1="70" y1="70" x2="70" y2="20" />', // minute hand
+				'<line id="s-hand" x1="70" y1="70" x2="70" y2="12" />', // second hand
+				'<line id="s-tail" x1="70" y1="70" x2="70" y2="56" />', // second tail
+				'<text x="62" y="22">12</text>',
+				'<text x="122" y="76">3</text>',
+				'<text x="66" y="126">6</text>',
+				'<text x="11" y="76">9</text>',
+			'</svg>',
+		'</div>',
+	].join('');
+
 	Templates['date'] = [
 		'<span class="dayTxt"><%= dayTxt %>, </span>',
 		'<span class="month"><%= month %> </span>',

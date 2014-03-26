@@ -29,10 +29,12 @@ define([
               '<li class="active" id="nav-dash"><a href="#dash">Dashboard</a></li>',
               '<li id="nav-about"><a href="#about">About</a></li>',
             '</ul>',
+            '<ul class="nav navbar-nav navbar-right">',
+              '<button type="button" id="btn-settings" class="btn btn-default">Settings</button>',
+            '</ul>',
           '</div><!--/.nav-collapse -->',
         '</div><!--/.container-fluid -->',
       '</div>',
-			'<button type="button" id="btn-settings" class="btn btn-default" style="float: right; margin: 10px;">Settings</button>',
 			'<div id="content"></div>'
 		].join(''),
 

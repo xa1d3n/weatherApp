@@ -102,6 +102,12 @@ body {
 	display: none;
 }
 
+/* Settings Button */
+#btn-settings {
+	margin-top: 10px;
+	margin-left: 13px;
+}
+
 
 /* Settings Dialog */
 .clockType > label{

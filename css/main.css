@@ -112,6 +112,7 @@ body {
 /* Settings Dialog */
 .clockType > label{
 	margin-right: 15px;
+	margin-left: 5px;
 }
 
 /* Date */
@@ -160,7 +161,7 @@ body {
 }
 
 
-@media (max-width: 750px)
+@media (max-width: 510px)
 {
 	#analogClock {
 		display: block;

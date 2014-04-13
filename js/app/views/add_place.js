@@ -13,7 +13,7 @@ define([
 			'<form role="form">',
 				'<div class="form-group">',
 					'<label for="countryCodeInput">Country or State</label>',
-					'<input type="text" class="form-control" id="countryCodeInput" placeholder="Enter name of country or state(E.g. MA, Vermont, Italy)">',
+					'<input type="text" class="form-control" id="countryCodeInput" placeholder="Enter name of country or state (E.g. MA, Vermont, Italy)">',
 				'</div>',
 				'<div class="form-group">',
 					'<label for="nameInput">City</label>',

@@ -20,6 +20,10 @@ define([
               
           },
 
+
+          /*
+           * Set month, day and year
+           */
           setDate: function() {
 			var that = this;
 
@@ -41,22 +45,25 @@ define([
             }, 1000);
           },
 
-          formatDayText: function(day) {
-               if (day) {
-                    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-                    var today = days[day];
-               }
+          /*
+           * Return name of current day
+          */
+          formatDayText: function(day) {
+               var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+               var today = days[day];
 
                return today;
           },
 
+          /*
+           * Return name of current month
+          */
           formatMonth: function(month) {
-               if (month) {
-                    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+               var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-                    var thisMonth = months[month];
-               }
+               var thisMonth = months[month];
 
                return thisMonth;
           }

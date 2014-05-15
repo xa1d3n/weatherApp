@@ -56,7 +56,7 @@ define([
 			'</div>',
 			'<div class="form-group">',
 				'<label for="backgroundColorInput">Background Color</label>',
-				'<input type="text" class="form-control" id="backgroundColorInput" placeholder="#000000" value="<%= backgroundColor %>">',
+				'<input type="color" class="form-control" id="backgroundColorInput" placeholder="#000000" value="<%= backgroundColor %>">',
 			'</div>',
 			'<div class="form-group">',
 				'<select id="tempType" class="form-control">',
